@@ -30,3 +30,33 @@ SELECT id_encuentro,
 FROM analisis_futbol_argentino;
 
 SELECT * FROM analisis_futbol_argentino;
+
+-- Muestra los equipos, dónde se llevaron a cabo y el resultado del partido, ordenado por fecha
+CREATE VIEW resultados_fecha AS
+SELECT A.fecha AS Fecha,
+       E1.equipo AS EquipoLocal,
+       E2.equipo AS EquipoVisitante,
+       L.locacion AS Locacion,
+       R.resultado AS Resultado
+FROM analisis_futbol_argentino A
+JOIN Equipos E1 ON A.id_equipo_local = E1.id_equipo
+JOIN Equipos E2 ON A.id_equipo_visitante = E2.id_equipo
+JOIN Locaciones L ON A.id_locacion = L.id_locacion
+JOIN Resultados R ON A.id_resultado = R.id_resultado
+ORDER BY A.fecha;
+
+SELECT *  FROM resultados_fecha
+
+-- Muestra los partidos jugados el día domingo, que hayan resultado en empate y ordenados en fecha descendiente
+CREATE VIEW partidosdomingoempate AS
+SELECT A.fecha AS Fecha,
+       E1.equipo AS EquipoLocal,
+       E2.equipo AS EquipoVisitante
+FROM analisis_futbol_argentino A
+JOIN Equipos E1 ON A.id_equipo_local = E1.id_equipo
+JOIN Equipos E2 ON A.id_equipo_visitante = E2.id_equipo
+WHERE DAYOFWEEK(A.fecha) = 1  
+      AND A.id_resultado = 3  
+ORDER BY A.fecha DESC;
+
+SELECT *  FROM partidosdomingoempate

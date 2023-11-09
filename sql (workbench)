@@ -36,6 +36,7 @@ CREATE TABLE analisis_futbol_argentino (
     valor_mercado_local DECIMAL(18,2),
     altura_media_local DECIMAL(18,2),
     edad_media_local DECIMAL(18,2),
+    edad_media_visita DECIMAL(18,2),
     valor_mercado_visita DECIMAL(18,2),
     altura_media_visita DECIMAL(18,2),
     fecha DATETIME,

@@ -1,0 +1,42 @@
+-- Iniciar transacción
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+
+-- Borrar registros de la tabla Equipos
+DELETE FROM Equipos WHERE id_equipo BETWEEN 1 AND 4;
+
+-- Rollback completo
+ROLLBACK;
+
+-- Guardar cambios
+COMMIT;
+
+-- Iniciar transacción
+START TRANSACTION;
+
+-- Insertar registros en la tabla Locaciones
+INSERT INTO locaciones (locacion) VALUES
+    ('Buenos Aires'),
+    ('Córdoba'),
+    ('Rosario'),
+    ('Mendoza');
+ savepoint checkpoint_1;
+
+INSERT INTO Locaciones (locacion) VALUES
+    ('Salta'),
+    ('Mar del Plata'),
+    ('San Juan'),
+    ('Bariloche');
+savepoint checkpoint_2;
+
+-- Release Savepoint (eliminar primer checkpoint)
+ RELEASE SAVEPOINT checkpoint_1;
+
+-- Rollback hasta checkpoint_2 (comentado)
+ ROLLBACK TO SAVEPOINT checkpoint_2;
+
+-- Rollback completo
+ ROLLBACK;
+
+-- Guardar cambios
+ COMMIT;

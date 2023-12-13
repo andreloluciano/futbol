@@ -1,9 +1,12 @@
--- Iniciar transacción
+-- Iniciar transacción, seteamos foreign key checks a 0 para poder borrar registros ya que son keys en otras tablas
 SET AUTOCOMMIT = 0;
+SET foreign_key_ckecks = 0; 
+
 START TRANSACTION;
 
 -- Borrar registros de la tabla Equipos
 DELETE FROM Equipos WHERE id_equipo BETWEEN 1 AND 4;
+SET foreign_key_ckecks = 1; 
 
 -- Rollback completo
 ROLLBACK;
@@ -17,15 +20,15 @@ START TRANSACTION;
 -- Insertar registros en la tabla Locaciones
 INSERT INTO locaciones (locacion) VALUES
     ('Buenos Aires'),
-    ('Córdoba'),
-    ('Rosario'),
-    ('Mendoza');
+    ('Jujuy'),
+    ('Salta'),
+    ('Alta Gracia');
  savepoint checkpoint_1;
 
 INSERT INTO Locaciones (locacion) VALUES
-    ('Salta'),
-    ('Mar del Plata'),
-    ('San Juan'),
+    ('Falda del Carmen'),
+    ('Rio Cuarto'),
+    ('Pilar'),
     ('Bariloche');
 savepoint checkpoint_2;
 

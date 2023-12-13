@@ -3,11 +3,11 @@ USE futbol
 -- Primero creamos una tabla para de seguimiento de los usuarios
 
 CREATE TABLE modificaciones (
-  `id_modificacion` INT NOT NULL AUTO_INCREMENT,
-  `usuario_modificacion` VARCHAR(45) NULL,
-  `fecha_modificacion` DATE NULL,
-  `hora_modificacion` DATETIME NULL,
-  PRIMARY KEY (`id_modificacion`));
+  id_modificacion INT NOT NULL AUTO_INCREMENT,
+  usuario_modificacion VARCHAR(45) NULL,
+  fecha_modificacion DATE NULL,
+  hora_modificacion DATETIME NULL,
+  PRIMARY KEY (id_modificacion));
 
 
 -- Este trigger se activará antes de un UPDATE y registrará al usuario, la fecha y la hora 

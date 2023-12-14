@@ -1,9 +1,3 @@
-/*
--- Query: SELECT * FROM futbol.campeonatos
-LIMIT 0, 1000
-
--- Date: 2023-12-13 16:59
-*/
 INSERT INTO `campeonatos` (`id_campeonato`,`campeonato`) VALUES (1,'Campeonato 2015');
 INSERT INTO `campeonatos` (`id_campeonato`,`campeonato`) VALUES (2,'Transicion 2016');
 INSERT INTO `campeonatos` (`id_campeonato`,`campeonato`) VALUES (3,'Campeonato 2016/17');

@@ -1,10 +1,3 @@
-/*
--- Query: SELECT * FROM futbol.equipos
-LIMIT 0, 1000
-
--- Date: 2023-12-13 17:00
-*/
--- Datos Tabla Equipos
 INSERT INTO `equipos` (`id_equipo`,`equipo`,`id_locacion`) VALUES (1,'Aldosivi',10);
 INSERT INTO `equipos` (`id_equipo`,`equipo`,`id_locacion`) VALUES (2,'Argentinos',4);
 INSERT INTO `equipos` (`id_equipo`,`equipo`,`id_locacion`) VALUES (3,'Arsenal',21);

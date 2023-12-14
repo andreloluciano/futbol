@@ -1,10 +1,3 @@
-/*
--- Query: SELECT * FROM futbol.locaciones
-LIMIT 0, 1000
-
--- Date: 2023-12-13 17:01
-*/
--- Datos Tabla Locaciones
 INSERT INTO `locaciones` (`id_locacion`,`locacion`) VALUES (1,'Avellaneda');
 INSERT INTO `locaciones` (`id_locacion`,`locacion`) VALUES (2,'Bahia Blanca');
 INSERT INTO `locaciones` (`id_locacion`,`locacion`) VALUES (3,'Banfield');

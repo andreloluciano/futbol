@@ -1,9 +1,3 @@
-/*
--- Query: SELECT * FROM futbol.analisis_futbol_argentino
-LIMIT 0, 1000
-
--- Date: 2023-12-13 16:57
-*/
 INSERT INTO `analisis_futbol_argentino` (`id_encuentro`,`fecha_torneo`,`partido`,`goles_local`,`goles_visita`,`valor_mercado_local`,`altura_media_local`,`edad_media_local`,`edad_media_visita`,`valor_mercado_visita`,`altura_media_visita`,`fecha`,`nombre_dia`,`apuesta_local`,`apuesta_visita`,`apuesta_empate`,`id_campeonato`,`id_equipo_local`,`id_equipo_visitante`,`id_locacion`,`id_resultado`) VALUES (1,1,1,2,0,28.50,1.78,22.70,28.10,8.73,1.79,'2015-02-13 00:00:00','viernes',1.75,5.01,3.37,1,38,1,4,1);
 INSERT INTO `analisis_futbol_argentino` (`id_encuentro`,`fecha_torneo`,`partido`,`goles_local`,`goles_visita`,`valor_mercado_local`,`altura_media_local`,`edad_media_local`,`edad_media_visita`,`valor_mercado_visita`,`altura_media_visita`,`fecha`,`nombre_dia`,`apuesta_local`,`apuesta_visita`,`apuesta_empate`,`id_campeonato`,`id_equipo_local`,`id_equipo_visitante`,`id_locacion`,`id_resultado`) VALUES (2,1,2,0,1,29.08,1.78,26.14,25.61,18.35,1.79,'2015-02-13 00:00:00','viernes',1.80,4.82,3.23,1,27,29,1,2);
 INSERT INTO `analisis_futbol_argentino` (`id_encuentro`,`fecha_torneo`,`partido`,`goles_local`,`goles_visita`,`valor_mercado_local`,`altura_media_local`,`edad_media_local`,`edad_media_visita`,`valor_mercado_visita`,`altura_media_visita`,`fecha`,`nombre_dia`,`apuesta_local`,`apuesta_visita`,`apuesta_empate`,`id_campeonato`,`id_equipo_local`,`id_equipo_visitante`,`id_locacion`,`id_resultado`) VALUES (3,1,3,2,0,39.73,1.78,26.63,24.95,12.13,1.80,'2015-02-14 00:00:00','sábado',1.70,5.55,3.34,1,30,12,4,1);

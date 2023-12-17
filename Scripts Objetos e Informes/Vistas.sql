@@ -19,15 +19,19 @@ SELECT
     A.apuesta_local,
     A.apuesta_visita,
     A.apuesta_empate,
-    C.campeonato AS nombre_campeonato,
+    C.campeonato AS campeonato,
+	  E.equipo AS equipo,
+    EL.id_equipo AS id_equipo_local,
     EL.equipo AS equipo_local,
+    EV.id_equipo AS id_equipo_visitante,
     EV.equipo AS equipo_visitante,
-    L.locacion AS nombre_locacion,
-    R.resultado AS nombre_resultado
-	  R.id_resultado AS id_resultado,
+    L.locacion AS locacion,
+    R.resultado AS resultado,
+    R.id_resultado AS id_resultado
 FROM
     analisis_futbol_argentino A
 JOIN campeonatos C ON A.id_campeonato = C.id_campeonato
+JOIN equipos E ON A.id_equipo_local = E.id_equipo
 JOIN equipos EL ON A.id_equipo_local = EL.id_equipo
 JOIN equipos EV ON A.id_equipo_visitante = EV.id_equipo
 JOIN locaciones L ON A.id_locacion = L.id_locacion

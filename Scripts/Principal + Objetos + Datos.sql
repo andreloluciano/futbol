@@ -70,7 +70,7 @@ BEGIN
 END//
 
 -- Para usar esta SP 
-CALL InsertarEquipo('Nuevo Equipo', 1);
+--CALL InsertarEquipo('Nuevo Equipo', 1);
 
 
 -- Eliminar Equipo (solamente escribir el ID del equipo que queremos eliminar)
@@ -83,7 +83,7 @@ BEGIN
 END//
 
 -- Para usar esta SP
-CALL EliminarEquipo('Id del equipo')
+--CALL EliminarEquipo('Id del equipo')
 
 
 -- Actualizar datos de un Equipo, actualiza nombre y locacion de un equipo (insertar id equipo que queremos editar y actualizar el nombre e id locacion)
@@ -99,7 +99,7 @@ BEGIN
 END//
 
 -- Para usar esta SP
-CALL ActualizarEquipo('id equipo, nuevo nombre e id locacion')
+--CALL ActualizarEquipo('id equipo, nuevo nombre e id locacion')
 
 -- Funciones
 
@@ -118,7 +118,7 @@ END;
 //
 
 -- Para utilizarla debemos ingresar la siguiente query
-SELECT NombreEquipo(1);
+--SELECT NombreEquipo(1);
 
 -- Esta función obtiene la cantidad de partidos jugados por equipo según si ID
 
@@ -136,7 +136,7 @@ END;
 //
 
 -- Para utilizar esta funcion debemos ingresar la siguiente query
-SELECT CantidadPartidosJugados(1);
+--SELECT CantidadPartidosJugados(1);
 
 -- Vistas
 

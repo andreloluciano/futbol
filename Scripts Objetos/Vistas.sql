@@ -1,5 +1,39 @@
 USE futbol;
 
+-- Esta vista une las tablas relevantes y selecciona campos clave para el análisis de resultados.
+CREATE VIEW Vista_Analisis_Resultados AS
+SELECT
+    A.id_encuentro,
+    A.fecha_torneo,
+    A.partido,
+    A.goles_local,
+    A.goles_visita,
+    A.valor_mercado_local,
+    A.altura_media_local,
+    A.edad_media_local,
+    A.edad_media_visita,
+    A.valor_mercado_visita,
+    A.altura_media_visita,
+    A.fecha,
+    A.nombre_dia,
+    A.apuesta_local,
+    A.apuesta_visita,
+    A.apuesta_empate,
+    C.campeonato AS nombre_campeonato,
+    EL.equipo AS equipo_local,
+    EV.equipo AS equipo_visitante,
+    L.locacion AS nombre_locacion,
+    R.resultado AS nombre_resultado
+	  R.id_resultado AS id_resultado,
+FROM
+    analisis_futbol_argentino A
+JOIN campeonatos C ON A.id_campeonato = C.id_campeonato
+JOIN equipos EL ON A.id_equipo_local = EL.id_equipo
+JOIN equipos EV ON A.id_equipo_visitante = EV.id_equipo
+JOIN locaciones L ON A.id_locacion = L.id_locacion
+JOIN resultados R ON A.id_resultado = R.id_resultado;
+
+
 -- Muestra una lista de las locaciones junto con los equipos asociados a cada una de ellas.
 CREATE VIEW LocacionesyEquipos AS
 SELECT L.locacion AS Locacion,

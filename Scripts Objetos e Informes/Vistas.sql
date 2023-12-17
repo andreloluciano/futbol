@@ -57,7 +57,7 @@ JOIN Equipos E ON C.id_campeonato = E.id_equipo;
 SELECT * FROM CampeonatosyEquipos;
 
 -- Muestra un análisis de los resultados en la tabla principal
-CREATE VIEW Vista_Analisis_Resultados AS
+CREATE VIEW Vista_Analisis_Principal AS
 SELECT id_encuentro,
   goles_local,
   goles_visita,

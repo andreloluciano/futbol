@@ -70,7 +70,7 @@ BEGIN
 END//
 
 -- Para usar esta SP 
---CALL InsertarEquipo('Nuevo Equipo', 1);
+-- CALL InsertarEquipo('Nuevo Equipo', 1);
 
 
 -- Eliminar Equipo (solamente escribir el ID del equipo que queremos eliminar)
@@ -83,7 +83,7 @@ BEGIN
 END//
 
 -- Para usar esta SP
---CALL EliminarEquipo('Id del equipo')
+-- CALL EliminarEquipo('Id del equipo')
 
 
 -- Actualizar datos de un Equipo, actualiza nombre y locacion de un equipo (insertar id equipo que queremos editar y actualizar el nombre e id locacion)
@@ -99,7 +99,7 @@ BEGIN
 END//
 
 -- Para usar esta SP
---CALL ActualizarEquipo('id equipo, nuevo nombre e id locacion')
+-- CALL ActualizarEquipo('id equipo, nuevo nombre e id locacion')
 
 -- Funciones
 
@@ -118,7 +118,7 @@ END;
 //
 
 -- Para utilizarla debemos ingresar la siguiente query
---SELECT NombreEquipo(1);
+-- SELECT NombreEquipo(1);
 
 -- Esta función obtiene la cantidad de partidos jugados por equipo según si ID
 
@@ -136,7 +136,7 @@ END;
 //
 
 -- Para utilizar esta funcion debemos ingresar la siguiente query
---SELECT CantidadPartidosJugados(1);
+-- SELECT CantidadPartidosJugados(1);
 
 -- Vistas
 
@@ -184,7 +184,8 @@ E.equipo AS Equipo
 FROM Locaciones L
 JOIN Equipos E ON L.id_locacion = E.id_locacion;
 
-SELECT * FROM LocacionesyEquipos;
+-- Para ver esta Vista:
+-- SELECT * FROM LocacionesyEquipos;
 
 -- Muestra una lista de equipos que participaron en cada campeonato durante el período de 2015-2022.
 CREATE VIEW CampeonatosyEquipos AS
@@ -193,7 +194,8 @@ E.equipo AS Equipo
 FROM Campeonatos C
 JOIN Equipos E ON C.id_campeonato = E.id_equipo;
 
-SELECT * FROM CampeonatosyEquipos;
+-- Para ver esta Vista
+-- SELECT * FROM CampeonatosyEquipos;
 
 -- Muestra un análisis de los resultados en la tabla principal
 CREATE VIEW Vista_Analisis_Resultados AS
@@ -206,7 +208,8 @@ SELECT id_encuentro,
   edad_media_visita
 FROM analisis_futbol_argentino;
 
-SELECT * FROM analisis_futbol_argentino;
+-- Para ver esta Vista
+-- SELECT * FROM analisis_futbol_argentino;
 
 -- Muestra los equipos, dónde se llevaron a cabo y el resultado del partido, ordenado por fecha
 CREATE VIEW resultados_fecha AS
@@ -222,7 +225,8 @@ JOIN Locaciones L ON A.id_locacion = L.id_locacion
 JOIN Resultados R ON A.id_resultado = R.id_resultado
 ORDER BY A.fecha;
 
-SELECT *  FROM resultados_fecha
+-- Para ver esta Vista
+-- SELECT *  FROM resultados_fecha
 
 -- Muestra los partidos jugados el día domingo, que hayan resultado en empate y ordenados en fecha descendiente
 CREATE VIEW partidosdomingoempate AS
@@ -236,7 +240,8 @@ WHERE DAYOFWEEK(A.fecha) = 1
       AND A.id_resultado = 3  
 ORDER BY A.fecha DESC;
 
-SELECT *  FROM partidosdomingoempate
+-- Para ver esta Vista
+-- SELECT *  FROM partidosdomingoempate
 
 -- Triggers
 

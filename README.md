@@ -1,3 +1,6 @@
+PDF Introducción
+https://drive.google.com/drive/u/0/folders/1wgY32pYtku9AYFJF7pq1N-Z3kZRzTs0g
+
 Instrucciones para la inserción de datos via Scripts
 
 - Descargar desde la carpeta Scripts el archivo Principal + Objetos + Datos.sql (https://github.com/andreloluciano/futbol/blob/main/Scripts/Principal%20%2B%20Objetos%20%2B%20Datos.sql)

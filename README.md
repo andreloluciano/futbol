@@ -1,5 +1,5 @@
 PDF Introducción
-https://drive.google.com/drive/u/0/folders/1wgY32pYtku9AYFJF7pq1N-Z3kZRzTs0g
+https://drive.google.com/file/d/1gTM55yDVHOCEon2m1Sz6IQTyS2tT0mgL/view?usp=drive_link
 
 Instrucciones para la inserción de datos via Scripts
 
